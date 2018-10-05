@@ -395,3 +395,29 @@ Build \\"raw\\" to dist:
 1493 B: raw.umd.js.gz
 1245 B: raw.umd.js.br"
 `;
+
+exports[`fixtures vuejs 1`] = `
+"Used script: microbundle
+
+Directory tree:
+
+vuejs
+  dist
+    vuejs.js
+    vuejs.js.map
+    vuejs.mjs
+    vuejs.mjs.map
+    vuejs.umd.js
+    vuejs.umd.js.map
+  index.js
+  package.json
+
+
+Build \\"vuejs\\" to dist:
+74 B: vuejs.js.gz
+56 B: vuejs.js.br
+131 B: vuejs.mjs.gz
+102 B: vuejs.mjs.br
+154 B: vuejs.umd.js.gz
+124 B: vuejs.umd.js.br"
+`;

@@ -19,6 +19,7 @@ import brotliSize from 'brotli-size';
 import prettyBytes from 'pretty-bytes';
 import shebangPlugin from 'rollup-plugin-preserve-shebang';
 import typescript from 'rollup-plugin-typescript2';
+import vuejs from 'rollup-plugin-vue';
 import flow from './lib/flow-plugin';
 import logError from './log-error';
 import { readFile, isDir, isFile, stdout, stderr } from './utils';
@@ -300,6 +301,7 @@ function createConfig(options, entry, format, writeMeta) {
 	}
 
 	const useTypescript = extname(entry) === '.ts' || extname(entry) === '.tsx';
+	const useVueJs = extname(entry) === '.vue';
 
 	const externalPredicate = new RegExp(`^(${external.join('|')})($|/)`);
 	const externalTest =
@@ -340,6 +342,7 @@ function createConfig(options, entry, format, writeMeta) {
 						inject: false,
 						extract: !!writeMeta,
 					}),
+					(useVueJs || options.vue) && vuejs(),
 					useTypescript &&
 						typescript({
 							typescript: require('typescript'),

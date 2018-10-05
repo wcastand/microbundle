@@ -31,7 +31,8 @@ export default handler => {
 		.option(
 			'--jsx',
 			'A custom JSX pragma like React.createElement (default: h)',
-		);
+		)
+		.option('--vue', 'Activate VueJs support');
 
 	prog
 		.command('build [...entries]', '', { default: true })

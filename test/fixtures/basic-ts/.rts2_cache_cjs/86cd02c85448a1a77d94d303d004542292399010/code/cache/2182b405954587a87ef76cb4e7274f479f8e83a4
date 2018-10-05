@@ -1,0 +1,1 @@
+{"code":"import Car from './car';\r\nvar Ferrari = new Car();\r\nexport default Ferrari;\r\n","dts":{"name":"/Users/wcastand/Documents/open-source/microbundle/test/fixtures/basic-ts/index.d.ts","writeByteOrderMark":false,"text":"import Car from './car';\r\ndeclare let Ferrari: Car;\r\nexport default Ferrari;\r\n"}}
